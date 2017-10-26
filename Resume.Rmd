@@ -1,0 +1,59 @@
+---
+title: "Resume"
+---
+##Introduction  
+  
+  
+####- __Name:__ Qing Xu  
+####- __Address:__ 100 Haven Avenue, Tower3, Rm 20E-2, New York ,NY 10032  
+####- __Prospective Job:__ Summer Internship about data analysis  
+<br>  
+
+   
+##Education
+####- __Columbia University  Mailman School of Public Health,New York, NY, US, 9/2017-5/2019__  
+- __Degree:__ Master of Biostatistis 
+- __Courses:__ Probability, Biostatistics methods, Data Science, Epidemiology
+
+####- __Nanjing University,Nanjing, China, 9/2013-6/2017__
+- __Degree:__ Bachelor of Science of Biological Science
+- __Courses:__ Calculus, Linear Algebra, Introduction to Bioinformatics, Proteomics, C Programming  
+
+####- __University of California, Davis	Davis, CA, US, 3/2016-6/2016__
+- __Exchange Student__
+<br>  
+  
+   
+##Internship
+####- __MobileMD System	Zhejiang, China, 7/2016-8/2016__
+- __Title:__ Intern Data Analyst  
+- Worked on database maintenance - clinical/health data organization, classification, clearing, entry, etc.  
+- Collaborated with data scientists to elicit data and perform statistical analysis with SAS.
+
+<br>  
+
+##Research  
+####- __Biostatistics Research Project, Nanjing Medical University (NJMU)	7/2016-9/2016__  
+- __Topic:__ A Random-Forest Model for Predicting Colorectal Carcinoma Progression   
+- Collected datasets with transcriptional profiles and clinical data from TCGA database.  
+- Constructed Random-Forest model with only clinical data, plotted ROC curve and calculated AUC values.  
+  
+####- __Student's Platform for Innovation and Entrepreneurship Training Program(NJU)	11/2015-10/2016__  
+- __Topic:__ Construction of siRNA Plasmid to Inhibit Rho-associated Protein Kinase (ROCK)Expression of Cardiovascular Disease (CVD)  
+- Led a team of four students, responsible for making schedules, writing research proposal and progress reports.  
+- The project was awarded as national level project.
+  
+####- __International Genetically Engineered Machine (iGEM) Competition(NJU)    	12/2014-9/2015__  
+- __Topic:__ The Opioid War: Targeted Exosomes Delivering µOpioid Receptor (MOR) siRNA Inhibitor to Neutrons  
+- Worked in a team focused on building plasmid and vitro experiment.   
+- Conducted questionnaires in college campus, and interviewed the directors, doctors and patients, and wrote a social investigation report about drug abuse and addiction.  
+<br>  
+  
+##Skill  
+- __Computer:__ Microsoft Office, R, SAS, C language
+- __Language:__ English and Chinese
+
+
+
+
+

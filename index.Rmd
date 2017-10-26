@@ -1,0 +1,34 @@
+---
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Qing"
+  right:
+    - text: "Resume"
+      href: Resume.html
+    - text: "About"
+      href: about.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<qx2178@cumc.columbia.edu>
+    - icon: fa-facebook-square fa-lg
+      href: https://www.facebook.com/people/Qing-Xu/100011556522258
+    - icon: fa-linkedin-square fa-lg
+      href: https://www.linkedin.com/in/qing-xu-633839139/
+    - icon: fa-github fa-lg
+      href: https://github.com/xuqingsally
+    
+output:
+  html_document
+---
+
+![](1.jpg)
+  
+  
+##key words about me  
+
+- __Biostatistics MS Student__  
+- __Columbia University Medical Center__  
+- __Movie__  
+- __China__  
+- __Data analysis in health__  
+- __Nanjing University__
