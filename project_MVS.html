@@ -11,7 +11,7 @@
 
 
 
-<title>Qing Xu</title>
+<title>A Propensity Score Matching analysis for evaluating Readmission after Mitral Valve Surgery for Functional Mitral Regurgitation</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -435,90 +435,82 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Qing Xu</h1>
+<h1 class="title toc-ignore">A Propensity Score Matching analysis for evaluating Readmission after Mitral Valve Surgery for Functional Mitral Regurgitation</h1>
 
 </div>
 
 
-<p><br> <a href="./link_file/resume.pdf"><span style="float:right">DOWNLOAD PDF</span></a></p>
+<p><br> Qing Xu<br />
+Codruta Chiuzan,PhD; Weijia Fan, MS; Isaac George, MD<em>;<br />
+Departments of Biostatistics and </em>Surgery, Columbia University Irving Medical Center</p>
 <hr />
-<div id="interest" class="section level2">
-<h2>Interest</h2>
-<p>With a Master’ s degree in biostatistics and experience of 1 year of data analysis and modeling in clinical data. Did projects of large interview population-based study, data manipulation, survival analysis, prediction model of psychosis and machine learning. I am familiar with SAS and R and very interested in clinical data and wish to contribute to research and decision making in healthcare.<br />
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>The study aims to determine the more effective surgical treatment of Functional mitral regurgitation by survival analysis of overall survival propability, overall readmission probability to hospital and readmission probability due to heart failure between Mitral valve repair and *Mitral valve replacement group. We found Mitral valve repair (MVr) has a higher overall survival probability than Mitral valve replacement (MVR) but no difference in readmission probability.<br />
 <br></p>
 </div>
-<div id="education" class="section level2">
-<h2>Education</h2>
-<div id="master-of-science-biostatistics" class="section level4">
-<h4><strong>Master of Science: Biostatistics</strong></h4>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p><strong>Functional mitral regurgitation (FMR)</strong> is one of the most common complications following a myocardial infarction. <strong>Mitral valve repair (MVr)</strong> is the preferred surgical treatment of FMR despite limited evidence supporting its efficacy. <strong>Mitral valve replacement (MVR)</strong> is the alternative procedure typically reserved for patients who are higher risk or refractory to MVr.<br />
+The purpose of this inter-disciplinary study is to evaluate the mid-term effectiveness of MVR vs MVr by studying hear-failure (HF) readmission rates and overall mortality.<br />
+<strong>Propensity score methods</strong> allow causal inferences from non-experimental (observational) studies and can fix lack of randomization with large enough sample size. <br></p>
 </div>
-<div id="columbia-university-mailman-school-of-public-health-new-york-ny-may-2019" class="section level4">
-<h4>Columbia University, Mailman School of Public Health <span style="float:right">New York, NY, May 2019</span></h4>
-<ul>
-<li>Courses: Probability, Biostatistics methods, Statistical Inference, Data Science, Epidemiology, Survival Analysis, Analysis of Longitudinal, Design of Medical Experiment, Randomized Clinical Trial</li>
-<li>GPA: 3.77</li>
-</ul>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>The data was from New York Presbyterian Hospital - College of Physicians and Surgeons of Columbia University and Leipzig Heart Center. 344 charts of FMR patients who received either MVr (n=263) or MVR (n=81) between 2004- 2016 at our institution were reviewed.</p>
+<p>Survival time, time of readmission to hospital and time of readmission due to heart failure were recorded as main outcomes. Baseline characteristics include 11 continuous variables and 21 categorical variables including medical history and Concomitant procedure.<br />
+<br></p>
 </div>
-<div id="bachelor-of-science-biological-science" class="section level4">
-<h4><strong>Bachelor of Science: Biological Science</strong></h4>
+<div id="analysis" class="section level2">
+<h2>Analysis</h2>
+<p>First do data cleaning and summary table for baseline characteristics and t test for continuous variables and chi-square test for categorical variables by treatment group. Then calculate <strong>standardized difference</strong> of each variable by Mitral valve repair (MVr) and Mitral valve replacement (MVR) to diagnosis balance between two groups;</p>
+<p>In a logistic regression model, the <strong>propensity scores</strong> are the predicted probabilities of receiving treatment, given the set of covariates; Calculate propensity score for each observation and match a ‘MVR’ subject with one that was ‘MVr’ within range of <strong>0.01</strong>.</p>
+<p>Use four cox models to compare overall survival time, overall readmission and heart failure readmission of MVr and MVR.<br />
+1. <strong>Unadjusted model</strong>: use procedure (Mvr vs MVR) as the only variable in survival analysis based on the Cox proportional hazards model<br />
+2. <strong>Multivariate adjusted model</strong>: choose variable that has standardized difference &gt;0.1 and procedure in survival model with stepwise selection<br />
+3. <strong>Propensity Score Analysis Using Inverse Weighting</strong>: weight = 1/prob if group=MVR and use weight=1/(1-prob) if group=MVr<br />
+4. <strong>Propensity Score Analysis using propensity score as a model covariate</strong><br />
+<br></p>
 </div>
-<div id="nanjing-universitynanjing-china-jun-2017" class="section level4">
-<h4>Nanjing University<span style="float:right">Nanjing, China, Jun 2017</span></h4>
-<ul>
-<li>Courses: Calculus, Linear Algebra, Introduction to Bioinformatics, Proteomics, C Programming</li>
-<li>GPA: 3.76</li>
-</ul>
+<div id="result" class="section level2">
+<h2>Result</h2>
+<div id="baseline-characteristics" class="section level4">
+<h4>Baseline characteristics</h4>
+<p>The imbalanced variables are age, LVEF, LVEDD, NYHA Class, MR, TR, AI, DM, CKD, previous cardiac procedure, CABG, AVR, TVR and other cardiac procedure (<a href="./link_file/mvs_tables.pdf">Table 1</a>). STS-score have collinearity to other variables so that they are excluded from models.<br />
+After propensity score matching, we only got 35 pairs comparison which is too little for analysis so just use propensity score probability as inverse weight and covariate for unmatched observations.</p>
+<p><br></p>
+</div>
+<div id="overall-survival-probability" class="section level4">
+<h4>Overall Survival Probability</h4>
+<p>Overall survival rate is higher in MVr than that in MVR (Fig 1.) and MVR has higher hazard in all four models (HR &gt;1) and the conclusion is significant in three models except using propensity score as a covariate variable (<a href="./link_file/mvs_tables.pdf">Table 2</a>).<br />
+<br> <img src="mvs_osp.jpg"/> Fig 1. Kaplan-Meier plot for overall survival probability</p>
+<p><br></p>
+</div>
+<div id="overall-hospital-readmission" class="section level4">
+<h4>Overall Hospital Readmission</h4>
+<p>Overall readmission probability is higher in MVr than that in MVR but not significant different (Fig 2.) MVr has higher hazard in all four models (HR &lt;1 ) but the conclusion is not significant in three models except in propensity score as inverse weight model(<a href="./link_file/mvs_tables.pdf">Table 3</a>). <br> <img src="mvs_or.jpg"/> Fig 2. Kaplan-Meier plot for overall hospital readmission</p>
+<p><br></p>
+</div>
+<div id="hospital-readmission-due-to-heart-failure" class="section level4">
+<h4>Hospital Readmission due to Heart Failure</h4>
+<p>HF readmission probability is slightly higher in MVr than that in MVR but not significant different (Fig 3.) MVr has higher hazard in all four models (HR &lt;1 ) but the conclusion is not significant in three models except in propensity score as inverse weight model(<a href="./link_file/mvs_tables.pdf">Table 4</a>). <br> <img src="mvs_hf.jpg"/> Fig 3. Kaplan-Meier plot for hospital readmission due to heart failure</p>
 <p><br></p>
 </div>
 </div>
-<div id="work-experience" class="section level2">
-<h2>Work Experience</h2>
-<div id="biostatistics-research-assistant" class="section level4">
-<h4><strong>Biostatistics Research Assistant</strong></h4>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Mitral valve repair (MVr) has a higher overall survival probability than Mitral valve replacement (MVR)(P=0.012).<br />
+Surprisingly, Mitral valve replacement (MVR) has lower all-cause and heart-failure readmission probabilities, but not significantly different from MVr(P =0.23, P=0.13).<br />
+One of limitations of this study is the small sample size. Due to the small number of matching pairs with propensity score, we use propensity score analysis rather than using matched pairs. The another reason that we end up with small balanced sample size is we have too many variables in the study.<br />
+For further study, we can include more patients and look at death event only due to heart failure.<br />
+<br></p>
 </div>
-<div id="columbia-universitynyspi-new-york-ny-oct-2018---may-2019" class="section level4">
-<h4>Columbia University/NYSPI, New York, NY <span style="float:right">Oct 2018 - May 2019</span></h4>
-<ul>
-<li>Conduct propensity score matching, survival analysis and logistics regression, including building cox survival models, plot survival functions and hazard curves with R, SAS SQL and SAS macro</li>
-<li>Machine Learning for schizophrenia prediction using random forest, boosting and regression models</li>
-<li>Help with data cleaning and make codebook for a large survey database with SAS, SPSS and Excel</li>
-<li>Collaborate with biostatistician and medical researchers for clinical trial data analysis in heart failure and mental health <br></li>
-</ul>
-</div>
-<div id="research-biostatistician-intern" class="section level4">
-<h4><strong>Research Biostatistician Intern</strong></h4>
-</div>
-<div id="new-york-presbyterian-hospital-new-york-ny-may-2018---aug-2018" class="section level4">
-<h4>New York-Presbyterian Hospital, New York, NY <span style="float:right">May 2018 - Aug 2018</span></h4>
-<ul>
-<li>Explored clinical trial data of trauma among hospitals in New York by using surveys, generalized linear models, cross correlation analysis, longitudinal data analysis, ANOVA and mapping in R</li>
-<li>Collaborated and consulted with surgeons and biostatisticians by contributing to the statistical design, analysis of clinical trials, and other study designs to execute trauma clinical research</li>
-<li>Provided analytic support for clinical and regulatory reports and research papers</li>
-<li>Attended routine meetings for exploring and developing latest clinical designs <br></li>
-</ul>
-</div>
-<div id="data-analyst-intern" class="section level4">
-<h4><strong>Data Analyst Intern</strong></h4>
-</div>
-<div id="mobile-md-system-zhejiang-china-jun-2016---aug-2016" class="section level4">
-<h4>Mobile MD System, Zhejiang, China <span style="float:right">Jun 2016 - Aug 2016</span></h4>
-<ul>
-<li>Worked on database maintenance - clinical/health data organization, classification, clearing, entry, etc</li>
-<li>Collaborated with data scientists and biostatisticians to elicit data, build proper designs, perform statistical analysis with SAS and interpret results to clients</li>
-</ul>
-<p><br></p>
-</div>
-</div>
-<div id="skill" class="section level2">
-<h2>Skill</h2>
-<ul>
-<li>R (R shiny and R markdown)</li>
-<li>SAS (Base and Advanced Programmer Certifications, SAS macro and SAS SQL)</li>
-<li>Tableau</li>
-<li>SPSS</li>
-<li>Excel</li>
-<li>Chinese</li>
-</ul>
+<div id="reference" class="section level2">
+<h2>Reference</h2>
+<p>[1] Francesco Nappi, Functional mitral regurgitation: an overview for surgical management framework. Journal of Thoracic Disease, 2018;10(7):4540-4555 .<br />
+[2] Guo, S. &amp; Fraser, W.M. (2014). Propensity Score Analysis: Statistical Methods and Applications, Second Edition. Thousand Oaks, CA: Sage Publications.<br />
+[3] Dongsheng Yang and Jarrod E. Dalton, A unified approach to measuring the effect size between two groups using SAS. SAS Global Forum 2012, paper 335-2012.</p>
+<p><strong>Read more about propensity score analysis from a great Lecture Note <a href="./link_file/PSM_Chiuzan_Mar2018.pdf">Here</a>.</strong></p>
 </div>
 
 

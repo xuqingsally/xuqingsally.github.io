@@ -1,13 +1,19 @@
 ---
-name: "Yay internet!"
+name: "Personal Website"
 output_dir: "."
 navbar:
   title: "Qing"
   right:
     - text: "Resume"
       href: Resume.html
-    - text: "About"
-      href: about.html
+    - text: "Project"
+      menu:
+        - text: "Survival Analysis of Mitral Valve Surgeries"
+          href: project_MVS.html
+        - text: "Linear Regression Model for length of stay in Hospital"
+          href: project_stay.html
+        - text: "Making website for job summary at New York"
+          href: project_job.html
     - icon: fa-envelope fa-lg
       href: mailto:<qx2178@cumc.columbia.edu>
     - icon: fa-facebook-square fa-lg
@@ -20,23 +26,29 @@ navbar:
 output:
   html_document
 ---
+<br>
+<center> <h1>Hello, I'm Qing !</h1> </center>
+***
+<img align= "left" src="1.jpg" width="50%" HSPACE="50" VSPACE="50"/>
+<br>
+<br>
 
-![](1.jpg)
-  
+#### I am a **Biostatistics Data Analyst** at
+<br>
+
+####Research Foundation for Mental Hygiene. I 
+<br>
+
+####graduated with a MS degree in biostatistics 
 <br>  
-  
-   
-     
-       
-         
-           
-                
-  
-##Hi I am Qing !  
 
-- __Biostatistics MS Student__  
-- __Columbia University Medical Center__  
-- __Movie__  
-- __China__  
-- __Data analysis in health__  
-- __Nanjing University__
+####from Columbia University and have 1 year's 
+<br>
+
+####experience of data analysis. I am ready for 
+<br>
+
+####contributing to medical health researches 
+<br>
+
+####with knowledge and passion !

@@ -1,59 +1,64 @@
 ---
-title: "Resume"
+title: "Qing Xu"
+output:
+  html_document:
+    toc: true
+    toc_float: true
 ---
-##Introduction  
-  
-  
-####- __Name:__ Qing Xu  
-####- __Address:__ 100 Haven Avenue, Tower3, Rm 20E-2, New York ,NY 10032  
-####- __Prospective Job:__ Summer Internship about data analysis  
+<br>
+[[DOWNLOAD PDF]{style="float:right"}](./link_file/resume.pdf) 
+
+***
+
+##Interest  
+With a Master' s degree in biostatistics and experience of 1 year of data analysis and modeling in clinical data. Did projects of large interview population-based study, data manipulation, survival analysis, prediction model of psychosis and machine learning. I am familiar with SAS and R and very interested in clinical data and wish to contribute to research and decision making in healthcare.  
 <br>  
 
    
 ##Education
-####- __Columbia University  Mailman School of Public Health,New York, NY, US, 9/2017-5/2019__  
-- __Degree:__ Master of Biostatistis 
-- __Courses:__ Probability, Biostatistics methods, Data Science, Epidemiology
+####**Master of Science: Biostatistics**  
+####Columbia University, Mailman School of Public Health [New York, NY, May 2019]{style="float:right"}
+- Courses: Probability, Biostatistics methods, Statistical Inference, Data Science, Epidemiology, Survival Analysis, Analysis of Longitudinal, Design of Medical Experiment, Randomized Clinical Trial
+- GPA: 3.77
 
-####- __Nanjing University,Nanjing, China, 9/2013-6/2017__
-- __Degree:__ Bachelor of Science of Biological Science
-- __Courses:__ Calculus, Linear Algebra, Introduction to Bioinformatics, Proteomics, C Programming  
-
-####- __University of California, Davis	Davis, CA, US, 3/2016-6/2016__
-- __Exchange Student__
-<br>  
-  
-   
-##Internship
-####- __MobileMD System	Zhejiang, China, 7/2016-8/2016__
-- __Title:__ Intern Data Analyst  
-- Worked on database maintenance - clinical/health data organization, classification, clearing, entry, etc.  
-- Collaborated with data scientists to elicit data and perform statistical analysis with SAS.
+####**Bachelor of Science: Biological Science**  
+####Nanjing University[Nanjing, China, Jun 2017]{style="float:right"}
+- Courses: Calculus, Linear Algebra, Introduction to Bioinformatics, Proteomics, C Programming
+- GPA: 3.76
 
 <br>  
+  
 
-##Research  
-####- __Biostatistics Research Project, Nanjing Medical University (NJMU)	7/2016-9/2016__  
-- __Topic:__ A Random-Forest Model for Predicting Colorectal Carcinoma Progression   
-- Collected datasets with transcriptional profiles and clinical data from TCGA database.  
-- Constructed Random-Forest model with only clinical data, plotted ROC curve and calculated AUC values.  
+##Work Experience
+####**Biostatistics Research Assistant**
+####Columbia University/NYSPI, New York, NY [Oct 2018 - May 2019]{style="float:right"}
+- Conduct propensity score matching, survival analysis and logistics regression, including building cox survival models, plot survival functions and hazard curves with R, SAS SQL and SAS macro
+- Machine Learning for schizophrenia prediction using random forest, boosting and regression models
+- Help with data cleaning and make codebook for a large survey database with SAS, SPSS and Excel
+- Collaborate with biostatistician and medical researchers for clinical trial data analysis in heart failure and mental health
+<br>  
+
+
+####**Research Biostatistician Intern**
+####New York-Presbyterian Hospital, New York, NY [May 2018 - Aug 2018]{style="float:right"}
+- Explored clinical trial data of trauma among hospitals in New York by using surveys, generalized linear models, cross correlation analysis, longitudinal data analysis, ANOVA and mapping in R
+- Collaborated and consulted with surgeons and biostatisticians by contributing to the statistical design, analysis of clinical trials, and other study designs to execute trauma clinical research
+- Provided analytic support for clinical and regulatory reports and research papers
+- Attended routine meetings for exploring and developing latest clinical designs
+<br>
   
-####- __Student's Platform for Innovation and Entrepreneurship Training Program(NJU)	11/2015-10/2016__  
-- __Topic:__ Construction of siRNA Plasmid to Inhibit Rho-associated Protein Kinase (ROCK)Expression of Cardiovascular Disease (CVD)  
-- Led a team of four students, responsible for making schedules, writing research proposal and progress reports.  
-- The project was awarded as national level project.
   
-####- __International Genetically Engineered Machine (iGEM) Competition(NJU)    	12/2014-9/2015__  
-- __Topic:__ The Opioid War: Targeted Exosomes Delivering µOpioid Receptor (MOR) siRNA Inhibitor to Neutrons  
-- Worked in a team focused on building plasmid and vitro experiment.   
-- Conducted questionnaires in college campus, and interviewed the directors, doctors and patients, and wrote a social investigation report about drug abuse and addiction.  
+####**Data Analyst Intern**
+####Mobile MD System, Zhejiang, China [Jun 2016 - Aug 2016]{style="float:right"}
+- Worked on database maintenance - clinical/health data organization, classification, clearing, entry, etc
+- Collaborated with data scientists and biostatisticians to elicit data, build proper designs, perform statistical analysis with SAS and interpret results to clients
+
 <br>  
   
 ##Skill  
-- __Computer:__ Microsoft Office, R, SAS, C language
-- __Language:__ English and Chinese
-
-
-
-
-
+- R (R shiny and R markdown)
+- SAS (Base and Advanced Programmer Certifications, SAS macro and SAS SQL)
+- Tableau
+- SPSS
+- Excel
+- Chinese
