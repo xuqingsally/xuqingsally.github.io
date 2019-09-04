@@ -7,6 +7,8 @@ navbar:
       href: Resume.html
     - text: "Project"
       menu:
+        - text: "Prediction of Conversion to Psychosis in High-Risk Patients"
+          href: project_psy.html
         - text: "Survival Analysis of Mitral Valve Surgeries"
           href: project_MVS.html
         - text: "Linear Regression Model for length of stay in Hospital"
@@ -14,7 +16,7 @@ navbar:
         - text: "Making website for job summary at New York"
           href: project_job.html
     - icon: fa-envelope fa-lg
-      href: mailto:<qx2178@cumc.columbia.edu>
+      href: mailto:<xuqingsally@gmail.com>
     - icon: fa-facebook-square fa-lg
       href: https://www.facebook.com/people/Qing-Xu/100011556522258
     - icon: fa-linkedin-square fa-lg
