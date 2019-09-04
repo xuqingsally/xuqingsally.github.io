@@ -1,0 +1,26 @@
+---
+title: Prediction of Conversion to Psychosis in High-Risk Patients
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+<br>
+Qing Xu  
+Melanie M.Wall, Phd; Ragy R.Girgis, MD*;  
+Departments of Biostatistics and *Psychiatry, Columbia University and New York State Psychiatric Insitute
+
+***
+##Overview
+In this series of studies among High-Risk Patients, we want to figure out the factors that influence the probability of conversion to psychosis and build predict model based on demographc, brain image measurments and symptoms.  
+
+<br>
+
+##Intensification of Symptoms enhance prediction of conversion to psychosis
+We are preparing a paper of this project.
+
+<br>
+
+##Risk Calculator
+We make a website of risk calculator to predict the probability of conversion to psychosis based on lasso logistic regression.  
+See the website [here](https://xuqingsally.github.io/risk_calculator/).
