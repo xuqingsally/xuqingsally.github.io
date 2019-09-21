@@ -10,8 +10,8 @@ output:
 
 ***
 
-##Interest  
-With a Master' s degree in biostatistics and experience of 1 year of data analysis and modeling in clinical data, I did projects of large interview population-based study, data manipulation, survival analysis, prediction model of psychosis and machine learning. I am familiar with SAS and R and very interested in clinical trials, longitudinal study, predictive models for health outcome and wish to contribute to research in healthcare.  
+##Summary 
+With a Master' s degree in biostatistics and experience of 1 year of data analysis and modeling in clinical data, I did projects of large interview population-based study, longitudinal and survival analysis, clinical trials, prediction model and machine learning of psychosis and behavior outcome. I am very interested in clinical trials, predictive models for health outcome with longitudinal data.
 <br>  
 
    
@@ -25,22 +25,21 @@ With a Master' s degree in biostatistics and experience of 1 year of data analys
 ####Nanjing University[Nanjing, China, Jun 2017]{style="float:right"}
 - Courses: Calculus, Linear Algebra, Introduction to Bioinformatics, Proteomics, C Programming
 - GPA: 3.76
-
 <br>  
   
 
 ##Working Experience
 ####**Biostatistics Data Analyst**
 ####Research Foundation for Mental Hygiene, New York, NY [Jul 2019 - Present]{style="float:right"}
--	Conduct data analysis of longitudinal behavior data, including correlation matrix and logistic regression models
--	Built risk calculator of conversion to psychosis based on lasso logistic regression with R
+-	Machine Learning methods and predictive models for behavior outcome prediction with longitudinal data  
+-	Participate in data analysis of stratified randomized clinical trial of schizophrenia  
+- Built web-based risk calculator of conversion to psychosis  
 -	Collaborate with clinicians for mental health paper publication
 <br>
 
 ####**Biostatistics Research Assistant**
 ####Columbia University/NYSPI, New York, NY [Oct 2018 - May 2019]{style="float:right"}
 - Conduct propensity score matching, survival analysis and logistics regression, including building cox survival models, plot survival functions and hazard curves with R, SAS SQL and SAS macro
-- Machine Learning for schizophrenia prediction using random forest, boosting and regression models
 - Help with data cleaning and make a codebook for a large survey database with SAS, SPSS and Excel
 - Collaborate with biostatistician and medical researchers for clinical trial data analysis in heart failure and mental health
 <br>  
@@ -51,14 +50,11 @@ With a Master' s degree in biostatistics and experience of 1 year of data analys
 - Explored clinical trial data of trauma among hospitals in New York by using surveys, generalized linear models, cross correlation analysis, longitudinal data analysis, ANOVA and mapping in R
 - Collaborated and consulted with surgeons and biostatisticians by contributing to the statistical design, analysis of clinical trials, and other study designs to execute trauma clinical research
 - Provided analytic support for clinical and regulatory reports and research papers
-- Attended routine meetings for exploring and developing latest clinical designs
-
 <br>
 
 ##Submitted Paper
 - Gary Brucato, Michael B. First, Qing Xu, Melanie M. Wall. (2019). Recency and Intensification of Positive Symptoms Enhance Prediction of Syndromal Psychosis in Clinical High-Risk Patients.                                                                                                          
 - Joseph A Gancayco, Weijia Fan, Qing Xu. (2019).  Readmission after Mitral Valve Surgery for Functional Mitral Regurgitation: Detailed Insights into Heart Failure Recurrence and Healthcare Utilization.  
-
 <br>
   
 ##Skill  

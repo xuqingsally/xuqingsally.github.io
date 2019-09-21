@@ -31,12 +31,11 @@ output:
 <br>
 <center> <h1>Hello, I'm Qing !</h1> </center>
 ***
-<img align= "left" src="1.jpg" width="50%" HSPACE="50" VSPACE="50"/>
-<br>
+<img align= "left" src="1.jpg" width="50%" HSPACE="40" VSPACE="40"/>
 <br>
 
 #### I am a **Biostatistics Data Analyst** at
-<br>
+<br>  
 
 ####Research Foundation for Mental Hygiene. I 
 <br>
@@ -44,13 +43,14 @@ output:
 ####graduated with a MS degree in biostatistics 
 <br>  
 
-####from Columbia University and have 1 year's 
+####from Columbia University Mailman School of 
 <br>
 
-####experience of data analysis. I am ready for 
+####public health. I am interested in clinical 
 <br>
 
-####contributing to medical health researches 
+####trials, predictive models and longitudinal
 <br>
 
-####with knowledge and passion !
+####data analysis for behavior and mental health.
+<br>
