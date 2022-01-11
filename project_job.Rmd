@@ -7,21 +7,21 @@ output:
 ---
 ***
 
-##Overview
+## Overview
 In this study We are trying to analyze the NYC government jobs based on the salary, the requirement of the degree, locations, job type and also required skills to provide people with a viewable results to let them find the potential suitable job.
 
 <br>
 
-##Data
+## Data
 Job information in NewYork City from 2013-2017 on [NYC Open Data](https://data.cityofnewyork.us/City-Government/NYC-Jobs/kpav-sd4t/data).
 
 <br>
 
-##Analysis
+## Analysis
 We made a website includes dashboard and Rshiny plots to show descriptive analysis such as location, salary of different jobs, salary of educational requirement and most frequently appear words in job requirement. 
 
 <br>
 
-##[Website](https://zhuoli233.github.io/NYjob.github.io/)
-See what we did on our website !
+## Website
+See what we did on our [website](https://zhuoli233.github.io/NYjob.github.io/) !
 
