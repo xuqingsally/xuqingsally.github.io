@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -74,9 +74,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -90,7 +88,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -195,8 +192,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -241,6 +236,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -253,48 +249,9 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -308,6 +265,12 @@ $(document).ready(function ()  {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -343,8 +306,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -353,6 +314,16 @@ div.tocify {
 
 
 </style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
@@ -374,7 +345,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Qing</a>
+      <a class="navbar-brand" href="index.html">Main</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -402,6 +373,9 @@ div.tocify {
     </li>
     <li>
       <a href="project_job.html">Making website for job summary at New York</a>
+    </li>
+    <li>
+      <a href="sas_macro.html">SAS Macro</a>
     </li>
   </ul>
 </li>
@@ -443,95 +417,36 @@ div.tocify {
 </div>
 
 
-<p><br> <a href="./link_file/resume.pdf"><span style="float:right">DOWNLOAD PDF</span></a></p>
+<p><br> <a href="./link_file/resume.pdf"><span style="float:right">Download Resume</span></a> <br> <a href="./link_file/resume_chinese.pdf"><span style="float:right">下载简历</span></a></p>
 <hr />
-<div id="summary" class="section level2">
-<h2>Summary</h2>
-<p>With a Master’ s degree in biostatistics and experience of 1 year of data analysis and modeling in clinical data, I did projects of large interview population-based study, longitudinal and survival analysis, clinical trials, prediction model and machine learning of psychosis and behavior outcome. I am very interested in clinical trials, predictive models for health outcome with longitudinal data. <br></p>
-</div>
-<div id="education" class="section level2">
-<h2>Education</h2>
-<div id="master-of-science-biostatistics" class="section level4">
-<h4><strong>Master of Science: Biostatistics</strong></h4>
-</div>
-<div id="columbia-university-mailman-school-of-public-health-new-york-ny-may-2019" class="section level4">
-<h4>Columbia University, Mailman School of Public Health <span style="float:right">New York, NY, May 2019</span></h4>
+<p>##Summary Skilled biostatistical programmer with 3 years of experience providing statistical analysis support and data manipulating for clinical projects in academic and industrial areas. With a master’s degree in biostatistics from Columbia University and solid skill of SAS and R software programming. Have experience in SDTM, ADaM, TFL production and validation, CRF annotation and specification updating in Clinical Phase I/II/III studies. <br></p>
+<p>##Education ####<strong>Master of Science: Biostatistics</strong><br />
+####Columbia University, Mailman School of Public Health <span style="float:right">New York, NY, May 2019</span> - Courses: Probability, Biostatistics methods, Statistical Inference, Data Science, Epidemiology, Survival Analysis, Analysis of Longitudinal, Design of Medical Experiment, Randomized Clinical Trial I, Randomized Clinical Trial II</p>
 <ul>
-<li>Courses: Probability, Biostatistics methods, Statistical Inference, Data Science, Epidemiology, Survival Analysis, Analysis of Longitudinal, Design of Medical Experiment, Randomized Clinical Trial</li>
 <li>GPA: 3.77</li>
 </ul>
-</div>
-<div id="bachelor-of-science-biological-science" class="section level4">
-<h4><strong>Bachelor of Science: Biological Science</strong></h4>
-</div>
-<div id="nanjing-universitynanjing-china-jun-2017" class="section level4">
-<h4>Nanjing University<span style="float:right">Nanjing, China, Jun 2017</span></h4>
+<p>####<strong>Bachelor of Science: Biological Science</strong><br />
+####Nanjing University<span style="float:right">Nanjing, China, Jun 2017</span> - Courses: Calculus, Linear Algebra, Introduction to Bioinformatics, Proteomics, C Programming - GPA: 3.76 <br></p>
+<p>##Working Experience ####<strong>Programmer Analyst</strong> ####PPD, part of Thermo Fisher Scientific, New Jersey, NJ <span style="float:right">Feb 2021 – Current</span><br />
+- Produce and validate SDTM and ADaM datasets based on specification for Phase I/II/III Oncology studies<br />
+- Produce and validate Tables, Figures and Listings (TFL) with SAS macro, including complicate shift tables and output formats for safety and efficacy analysis - Generate annotated Case Report Forms (CRF) based on study protocol and SDTM specification - Quality control of unblinded masked and scrambling datasets, and help with data delivery - Update SDTM/ADaM/TFL specification based on Study protocol and datasets - Generate SAS macro for repeated TLF outputs</p>
+<p>####<strong>Biostatistical Programmer</strong> ####Brightech International, New Jersey, NJ <span style="float:right">Sep 2020 – Feb 2021</span><br />
+- Generate and validate ADaM datasets and TFL based on standard operating procedures and specification in a timely manner - Perform statistics analysis such as chi-square test, t test, ANOVA, logistic regression, cox models and KM plots on clinical data in phase I/II/III according to statistical analysis plan with SAS software - Participant in SAS macro development and debugs, specification updates for Oncology and COVID studies</p>
+<p>####<strong>Biostatistics Data Analyst</strong> ####Research Foundation for Mental Hygiene, New York, NY <span style="float:right">Jun 2019 - Sep 2020</span> - Machine Learning methods and predictive models for behavior outcome prediction with longitudinal data<br />
+- Participate in data analysis of stratified randomized clinical trial of schizophrenia<br />
+- Built web-based risk calculator of conversion to psychosis<br />
+- Collaborate with clinicians for mental health paper publication <br></p>
+<p>####<strong>Biostatistics Research Assistant</strong> ####Columbia University/NYSPI, New York, NY <span style="float:right">Oct 2018 - May 2019</span> - Conduct propensity score matching, survival analysis and logistics regression, including building cox survival models, plot survival functions and hazard curves with R, SAS SQL and SAS macro - Help with data cleaning and make a codebook for a large survey database with SAS, SPSS and Excel - Collaborate with biostatistician and medical researchers for clinical trial data analysis in heart failure and mental health <br></p>
+<p>####<strong>Research Biostatistician Intern</strong> ####New York-Presbyterian Hospital, New York, NY <span style="float:right">May 2018 - Aug 2018</span> - Explored clinical trial data of trauma among hospitals in New York by using surveys, generalized linear models, cross correlation analysis, longitudinal data analysis, ANOVA and mapping in R - Collaborated and consulted with surgeons and biostatisticians by contributing to the statistical design, analysis of clinical trials, and other study designs to execute trauma clinical research - Provided analytic support for clinical and regulatory reports and research papers <br></p>
+<p>##Publication - Brucato, G., First, M., Dishy, G., Samuel, S., Xu, Q., Wall, M., . . . Girgis, R. (2021). Recency and intensification of positive symptoms enhance prediction of conversion to syndromal psychosis in clinical high-risk patients. Psychological Medicine, 51(1), 112-120. <a href="doi:10.1017/S0033291719003040" class="uri">doi:10.1017/S0033291719003040</a></p>
 <ul>
-<li>Courses: Calculus, Linear Algebra, Introduction to Bioinformatics, Proteomics, C Programming</li>
-<li>GPA: 3.76 <br></li>
+<li><p>Budimirovic, D. B., Protic, D. D., Delahunty, C. M., Andrews, H. F., Choo, T.-H., Xu, Q., Berry-Kravis, E., Kaufmann, W. E., &amp; for the FORWARD Consortium (2021). Sleep problems in fragile X syndrome: Cross-sectional analysis of a large clinic-based cohort. American Journal of Medical Genetics Part A, 1– 11. <a href="https://doi.org/10.1002/ajmg.a.62601" class="uri">https://doi.org/10.1002/ajmg.a.62601</a></p></li>
+<li><p>Height and Body Mass Index in Fragile X Syndrome: A Longitudinal Assessment. Obesity. DOI: 10.1002/oby.23368</p></li>
+<li><p>Joseph A Gancayco, Weijia Fan, Qing Xu. (2019). Readmission after Mitral Valve Surgery for Functional Mitral Regurgitation: Detailed Insights into Heart Failure Recurrence and Healthcare Utilization.<br />
+<br></p></li>
 </ul>
-</div>
-</div>
-<div id="working-experience" class="section level2">
-<h2>Working Experience</h2>
-<div id="biostatistics-data-analyst" class="section level4">
-<h4><strong>Biostatistics Data Analyst</strong></h4>
-</div>
-<div id="research-foundation-for-mental-hygiene-new-york-ny-jul-2019---present" class="section level4">
-<h4>Research Foundation for Mental Hygiene, New York, NY <span style="float:right">Jul 2019 - Present</span></h4>
-<ul>
-<li>Machine Learning methods and predictive models for behavior outcome prediction with longitudinal data<br />
-</li>
-<li>Participate in data analysis of stratified randomized clinical trial of schizophrenia<br />
-</li>
-<li>Built web-based risk calculator of conversion to psychosis<br />
-</li>
-<li>Collaborate with clinicians for mental health paper publication <br></li>
-</ul>
-</div>
-<div id="biostatistics-research-assistant" class="section level4">
-<h4><strong>Biostatistics Research Assistant</strong></h4>
-</div>
-<div id="columbia-universitynyspi-new-york-ny-oct-2018---may-2019" class="section level4">
-<h4>Columbia University/NYSPI, New York, NY <span style="float:right">Oct 2018 - May 2019</span></h4>
-<ul>
-<li>Conduct propensity score matching, survival analysis and logistics regression, including building cox survival models, plot survival functions and hazard curves with R, SAS SQL and SAS macro</li>
-<li>Help with data cleaning and make a codebook for a large survey database with SAS, SPSS and Excel</li>
-<li>Collaborate with biostatistician and medical researchers for clinical trial data analysis in heart failure and mental health <br></li>
-</ul>
-</div>
-<div id="research-biostatistician-intern" class="section level4">
-<h4><strong>Research Biostatistician Intern</strong></h4>
-</div>
-<div id="new-york-presbyterian-hospital-new-york-ny-may-2018---aug-2018" class="section level4">
-<h4>New York-Presbyterian Hospital, New York, NY <span style="float:right">May 2018 - Aug 2018</span></h4>
-<ul>
-<li>Explored clinical trial data of trauma among hospitals in New York by using surveys, generalized linear models, cross correlation analysis, longitudinal data analysis, ANOVA and mapping in R</li>
-<li>Collaborated and consulted with surgeons and biostatisticians by contributing to the statistical design, analysis of clinical trials, and other study designs to execute trauma clinical research</li>
-<li>Provided analytic support for clinical and regulatory reports and research papers <br></li>
-</ul>
-</div>
-</div>
-<div id="submitted-paper" class="section level2">
-<h2>Submitted Paper</h2>
-<ul>
-<li>Gary Brucato, Michael B. First, Qing Xu, Melanie M. Wall. (2019). Recency and Intensification of Positive Symptoms Enhance Prediction of Syndromal Psychosis in Clinical High-Risk Patients.<br />
-</li>
-<li>Joseph A Gancayco, Weijia Fan, Qing Xu. (2019). Readmission after Mitral Valve Surgery for Functional Mitral Regurgitation: Detailed Insights into Heart Failure Recurrence and Healthcare Utilization.<br />
-<br></li>
-</ul>
-</div>
-<div id="skill" class="section level2">
-<h2>Skill</h2>
-<ul>
-<li>R (R shiny and R markdown)</li>
-<li>SAS (Base and Advanced Programmer Certifications, SAS macro and SAS SQL)</li>
-<li>Tableau</li>
-<li>SPSS</li>
-<li>Excel</li>
-<li>Chinese</li>
-</ul>
-</div>
+<p>##Skill<br />
+- R (R shiny and R markdown) - SAS (Base and Advanced Programmer Certifications, SAS macro and SAS SQL) - Tableau - SPSS - Excel - Chinese</p>
 
 
 
@@ -551,6 +466,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

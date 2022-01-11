@@ -2,7 +2,7 @@
 name: "Personal Website"
 output_dir: "."
 navbar:
-  title: "Qing"
+  title: "Main"
   right:
     - text: "Resume"
       href: Resume.html
@@ -16,6 +16,8 @@ navbar:
           href: project_stay.html
         - text: "Making website for job summary at New York"
           href: project_job.html
+        - text: "SAS Macro"
+          href: sas_macro.html
     - icon: fa-envelope fa-lg
       href: mailto:<xuqingsally@gmail.com>
     - icon: fa-facebook-square fa-lg
@@ -34,23 +36,17 @@ output:
 <img align= "left" src="1.jpg" width="50%" HSPACE="40" VSPACE="40"/>
 <br>
 
-#### I am a **Biostatistics Data Analyst** at
+#### I am a **Programmer Analyst** at PPD, Inc.
 <br>  
 
-####Research Foundation for Mental Hygiene. I 
+#### I graduated with a MS degree in biostatistics
 <br>
 
-####graduated with a MS degree in biostatistics 
+#### from Columbia University Mailman School of
 <br>  
 
-####from Columbia University Mailman School of 
+#### public health. I have 3 years of experience
 <br>
 
-####public health. I am interested in clinical 
-<br>
-
-####trials, predictive models and longitudinal
-<br>
-
-####data analysis for behavior and mental health.
+#### in clinical trial data analysis.
 <br>
