@@ -1,0 +1,144 @@
+*********************************************************************************
+* Two macro to assign labels to variables and output table with spanning header *
+* Author: Qing Xu                                                               *
+* Date: 1/13/2022                                                               *
+*********************************************************************************;
+
+********************
+* 1. Assign labels *
+********************;
+
+/* Format of label */
+proc format;
+   value label
+      1 = "Actual Value"
+      2 = "Change from Baseline"
+      ; 
+run;
+
+
+/* mylabels dataset which has two columns: variable and description.
+variable column has all variable names which needs label.
+description column has all labels for each variable. 
+m and n may be changed depends on target dataset. */
+
+data mylabels;
+do m=1 to 3;
+  do n=1 to 2;
+  variable = "STAT_VALUE_"||strip(put(m,best.))||'_'||strip(put(n,best.));
+  description = put(n, label.);
+  output;
+  end;
+end;
+run;
+
+****************************************************************************************
+%label_data to label variables.
+data_set: input target dataset that includes those variables need label.
+ds_labels: dataset that contains information of label for each variable. 
+column_name: column name of target variables in ds_labels dataset. Default is variable.
+column_label: column name of label in ds_labels dataset. Default is description.
+****************************************************************************************;
+
+%macro label_data(data_set, ds_labels, column_name=variable, column_label=description);
+
+* create distinct macro variables for each variable name and label; 
+data _null_; 
+     set &ds_labels; 
+	 call symput('var' || strip(put(_N_,best.)), trim(left(&column_name))); 
+     call symput('label' || strip(put(_N_,best.)), trim(left(&column_label))); 
+     call symput('nobs', strip(put(_N_,best.))); 
+run;
+
+
+* use PROC DATASETS to change the labels;
+proc datasets 
+     library = work 
+          memtype = data
+          nolist; 
+     modify &data_set; 
+     label 
+          %do i = 1 %to &nobs; 
+               &&var&i = &&label&i 
+          %end; 
+     ; 
+     quit; 
+run; 
+
+%mend;
+%label_data(data_set=final, ds_labels=mylabels);
+
+
+
+*********************
+* 2. Report dataset *
+*********************;
+****************************************************************************************
+%report to output table with spanning header.
+The dataset final should contain:
+pagenum: page information
+&subgroup: subgroup variable. Here is paramn.
+atptn: by variable.
+stat_row: sorting variable.
+stat_label: column 1 for the output table.
+stat_value_: : statistics value of treatments.
+****************************************************************************************;
+
+
+%macro report;
+
+proc sql noprint;
+ select max(pagenum) into: maxpg
+ from final;
+
+ select max(&subgroup) into: maxsub
+ from final;
+quit;
+
+%do subgno = 1 %to &maxsub; *subgroup;
+
+   %do pagno =1 %to &maxpg;
+
+ proc report data=FINAL missing split="$" nowd ;
+	where &subgroup = &subgno and pagenum = &pagno;
+  COLUMNS &subgroup pagenum PARAMN ATPTN STAT_ROW stat_label
+('Column Header'
+('Trt 1' stat_value_1_1 stat_value_1_2) 
+('Trt 2' stat_value_2_1 stat_value_2_2) 
+('Trt Total' stat_value_3_1 stat_value_3_2));
+
+define &subgroup / order order=internal noprint;
+define pagenum / order order=internal noprint;
+define PARAMN / order order=internal noprint;
+ define ATPTN / order order=internal noprint;
+ define STAT_ROW / order order=internal noprint;
+ define stat_label / "Parameter$  Period$    Statistic" style(column)=[cellwidth=25% asis=on] 
+style(header)=[just=l asis=on];
+ define stat_value_1_1 / style(column)=[cellwidth=12% asis=on vjust=b just=l 
+protectspecialchars=off];
+ define stat_value_1_2 / style(column)=[cellwidth=12% asis=on vjust=b just=l 
+protectspecialchars=off];
+ define stat_value_2_1 / style(column)=[cellwidth=12% asis=on vjust=b just=l 
+protectspecialchars=off];
+  define stat_value_2_2 / style(column)=[cellwidth=12% asis=on vjust=b just=l 
+protectspecialchars=off];
+  define stat_value_3_1 / style(column)=[cellwidth=12% asis=on vjust=b just=l 
+protectspecialchars=off];
+  define stat_value_3_2 / style(column)=[cellwidth=12% asis=on vjust=b just=l 
+protectspecialchars=off];
+
+
+  break after pagenum / page;
+  compute BEFORE ATPTN;
+  line " ";
+  endcomp;
+run;
+%end;
+%end;
+
+%mend report;
+
+*Call report macro;
+** subgroup variable is paramn;
+%let subgroup = PARAMN;
+%report;

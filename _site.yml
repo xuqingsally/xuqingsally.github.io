@@ -15,8 +15,10 @@ navbar:
           href: project_stay.html
         - text: "Making website for job summary at New York"
           href: project_job.html
-        - text: "SAS Macro"
-          href: sas_macro.html
+    - text: "SAS Macro"
+      menu:
+        - text: "Assign Labels & Spanning Header"
+          href: sas_macro_1.html
     - icon: fa-envelope fa-lg
       href: mailto:<xuqingsally@gmail.com>
     - icon: fa-facebook-square fa-lg
